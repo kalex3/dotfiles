@@ -2,7 +2,7 @@ export EDITOR="vi"
 export VISUAL="vi"
 export MANPAGER="vi +Man!"
 export TERMINAL="kitty"
-export BROWSER="librewolf"
+export BROWSER="chromium"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
