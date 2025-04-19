@@ -23,7 +23,8 @@ abbr -a i kitty +kitten icat
 abbr -a - cd -
 abbr -a r ranger
 abbr -a ff fastfetch
-abbr -a ta tmux a -t 
+abbr -a ta tmux attach -t 
+abbr -a tn tmux new -t 
 
 function ranger
 	set tempfile (mktemp -t tmp.XXXXXX)
