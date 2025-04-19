@@ -5,7 +5,7 @@
 Dependencies:
 
 ```shell
-sudo pacman -S git chezmoi ttf-firacode-nerd fish neovim tmux kitty mpv zathura wikiman arch-wiki-docs gcc make python ripgrep fd unzip tree-sitter-cli
+sudo pacman -S git chezmoi ttf-firacode-nerd fish neovim tmux kitty newsboat mpv zathura wikiman arch-wiki-docs gcc make python ripgrep fd unzip tree-sitter-cli
 ```
 
 Apply the dotfiles:
