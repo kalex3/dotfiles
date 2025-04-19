@@ -14,7 +14,7 @@ Apply the dotfiles:
 chezmoi init --apply kalex3
 ```
 
-Apply neovim config:
+Apply [my neovim config](https://github.com/kalex3/kickstart.nvim):
 
 ```shell
 git clone https://github.com/kalex3/kickstart.nvim ~/.config/nvim
