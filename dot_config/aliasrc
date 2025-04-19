@@ -1,0 +1,34 @@
+# vim: ft=sh
+alias ls='ls -h --color=auto --group-directories-first'
+alias grep='grep --color=always'
+alias md='mkdir -p'
+alias rd='rmdir'
+mkcd(){
+    mkdir -p $1 && cd $1
+}
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias df='df -Th'
+alias du='du -sh'
+alias free='free -h'
+alias cal="cal -m"
+alias ll='ls -Al'
+alias la='ls -A'
+alias l='ls -l'
+alias s='sudo '
+alias p='pacman'
+alias sp='sudo pacman'
+alias sv='systemctl'
+alias vi='nvim -i NONE'
+alias vim='vim -i NONE'
+alias py='python'
+alias h='history'
+alias c='tldr'
+alias b='bluetoothctl'
+alias wiki="wikiman -s arch -H $BROWSER"
+alias i='kitty +kitten icat'
+e(){
+    which -p $1 && $EDITOR "$(which $1)"
+}
