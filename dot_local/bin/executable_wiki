@@ -1,2 +1,2 @@
 #!/bin/sh
-wikiman -s arch -H $BROWSER
+wikiman -s arch -H "xdg-open" "$1"
