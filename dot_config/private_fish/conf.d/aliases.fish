@@ -18,15 +18,14 @@ abbr -a py python
 abbr -a c tldr
 abbr -a h history
 abbr -a hc history clear
-abbr -a b bluetoothctl
 abbr -a i kitty +kitten icat
-abbr -a - cd -
-abbr -a r ranger
 abbr -a ff fastfetch
 abbr -a ta tmux attach -t 
 abbr -a tn tmux new -t 
+abbr -a - cd -
+alias clear="echo 'use CTRL+L'"
 
-function ranger
+function ranger_cd
 	set tempfile (mktemp -t tmp.XXXXXX)
 	set command_argument "map Q chain shell echo %d > $tempfile; quitall"
 	command ranger --cmd="$command_argument" $argv
@@ -34,11 +33,12 @@ function ranger
 		set ranger_pwd (cat $tempfile)
 		if test -n $ranger_pwd -a -d $ranger_pwd
 			# builtin cd -- $ranger_pwd
-            cd $ranger_pwd
+			cd $ranger_pwd
 		end
 	end
 	command rm -f -- $tempfile
 end
+bind \co 'ranger_cd; commandline -f repaint'
 
 function mkcd
     mkdir $argv
