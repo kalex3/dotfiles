@@ -1,0 +1,2 @@
+#!/bin/sh
+wikiman -s arch -H $BROWSER
