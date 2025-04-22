@@ -29,6 +29,3 @@ alias c='tldr'
 alias b='bluetoothctl'
 alias wiki="wikiman -s arch -H $BROWSER"
 alias i='kitty +kitten icat'
-e(){
-    which -p $1 && $EDITOR "$(which $1)"
-}
