@@ -22,23 +22,25 @@ abbr -a i kitty +kitten icat
 abbr -a ff fastfetch
 abbr -a ta tmux attach -t 
 abbr -a tn tmux new -t 
-abbr -a - cd -
+abbr -a gpgex gpg -a --export
+abbr -a gpge gpg -a --encrypt -r
+abbr -a gpgd gpg --decrypt
+abbr -a gpgs gpg --clearsign -u
 alias clear="echo 'use CTRL+L'"
 
 function ranger_cd
-	set tempfile (mktemp -t tmp.XXXXXX)
-	set command_argument "map Q chain shell echo %d > $tempfile; quitall"
-	command ranger --cmd="$command_argument" $argv
-	if test -s $tempfile
-		set ranger_pwd (cat $tempfile)
-		if test -n $ranger_pwd -a -d $ranger_pwd
-			# builtin cd -- $ranger_pwd
-			cd $ranger_pwd
-		end
-	end
-	command rm -f -- $tempfile
+    set tempfile (mktemp -t tmp.XXXXXX)
+    set command_argument "map q chain shell echo %d > $tempfile; quitall"
+    command ranger --cmd="$command_argument" $argv
+    if test -s $tempfile
+        set ranger_pwd (cat $tempfile)
+        if test -n $ranger_pwd -a -d $ranger_pwd
+            # builtin cd -- $ranger_pwd
+            cd $ranger_pwd
+        end
+    end
+    command rm -f -- $tempfile
 end
-bind \co 'ranger_cd; commandline -f repaint'
 
 function mkcd
     mkdir $argv
