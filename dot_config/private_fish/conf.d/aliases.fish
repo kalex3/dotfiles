@@ -22,10 +22,12 @@ abbr -a i kitty +kitten icat
 abbr -a ff fastfetch
 abbr -a ta tmux attach -t 
 abbr -a tn tmux new -t 
-abbr -a gpgex gpg -a --export
+abbr -a gpgx gpg -a --export
 abbr -a gpge gpg -a --encrypt -r
 abbr -a gpgd gpg --decrypt
 abbr -a gpgs gpg --clearsign -u
+abbr -a wlc wl-copy
+abbr -a wlp wl-paste
 alias clear="echo 'use CTRL+L'"
 
 function ranger_cd
