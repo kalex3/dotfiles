@@ -1,3 +1,5 @@
+include "~/.config/newsboat/dark"
+
 browser $BROWSER
 macro v set browser "setsid -f mpv --really-quiet --no-terminal" ; open-in-browser ; set browser $BROWSER
 
