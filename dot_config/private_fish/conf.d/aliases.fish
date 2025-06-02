@@ -33,23 +33,9 @@ abbr -a gpgv gpg --verify
 abbr -a gpgi gpg --import
 abbr -a wlc wl-copy
 abbr -a wlp wl-paste
+abbr -a ghc gh copilot suggest
+abbr -a wm wikiman
+abbr -a yt pipe-viewer
+abbr -a ytm pipe-viewer --resolution audio
 alias clear="echo 'use CTRL+L'"
-
-function ranger_cd
-    set tempfile (mktemp -t tmp.XXXXXX)
-    set command_argument "map q chain shell echo %d > $tempfile; quitall"
-    command ranger --cmd="$command_argument" $argv
-    if test -s $tempfile
-        set ranger_pwd (cat $tempfile)
-        if test -n $ranger_pwd -a -d $ranger_pwd
-            # builtin cd -- $ranger_pwd
-            cd $ranger_pwd
-        end
-    end
-    command rm -f -- $tempfile
-end
-
-function mkcd
-    mkdir $argv
-    and cd $argv
-end
+alias ls="lsd"
