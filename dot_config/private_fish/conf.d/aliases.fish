@@ -35,6 +35,7 @@ abbr -a wlc wl-copy
 abbr -a wlp wl-paste
 abbr -a ghc gh copilot suggest
 abbr -a wm wikiman
+abbr -a n newsboat
 abbr -a yt pipe-viewer
 abbr -a ytm pipe-viewer --resolution audio
 alias clear="echo 'use CTRL+L'"
